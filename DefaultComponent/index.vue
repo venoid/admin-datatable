@@ -7,8 +7,10 @@
 <script>
 export default {
   name: "Default Component",
-  data: {
-    isVisible: false
+  data() {
+    return {
+      isVisible: false
+    }
   },
   methods: {
     toggle() {

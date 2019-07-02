@@ -1,7 +1,7 @@
 {
   "name": "2fresh__dev-vue-components",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "DefaultComponent/index.vue",
   "repository": "git@bitbucket.org:2fresh/2fresh__dev-vue-components.git",
-  "author": "Kryštof Rainisch <krystof.rainisch@sprites.co>"
+  "author": "Kryštof Rainisch <krystof.rainisch@2fresh.cz>"
 }
