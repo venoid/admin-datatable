@@ -1,18 +1,18 @@
 <template>
   <div>
-    <img src="{{ src }}" />
+    <img :src="src" />
   </div>
 </template>
 <script>
 export default {
-  name: "Image",
+  name: 'ImageComponent',
   props: {
     src: {
-      type: "String",
-      default: "https://picsum.photos/400"
+      type: String,
+      default: 'https://picsum.photos/400'
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
