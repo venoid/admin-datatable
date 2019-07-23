@@ -13,16 +13,16 @@ PACKAGE_VERSION=$(cat package.json \
   | tr -d '[[:space:]]')
 
 # Get package version
-echo Enter new package version - current is $PACKAGE_VERSION :
-read NEW_VERSION
+#echo Enter new package version - current is $PACKAGE_VERSION :
+#read NEW_VERSION
 
 # Set new version
-npm version $NEW_VERSION
+#npm version $NEW_VERSION
 
 # Login to npm
-npm login
+#npm login
 
 # Build project and publish library with new version
-npm run build-bundle && npm publish --access public
+npm run build-bundle && yarn publish
 
-git push
+#git push
