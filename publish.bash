@@ -19,6 +19,9 @@ read NEW_VERSION
 # Set new version
 npm version $NEW_VERSION
 
+# Login to npm
+npm login --scope=@2f --registry=https://registry.npmjs.com/2fresh__dev-vue-components
+
 # Build project and publish library with new version
 npm run build-bundle && npm publish --access public
 
