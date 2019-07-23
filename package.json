@@ -1,6 +1,6 @@
 {
   "name": "@2f/vue-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "2Fresh library with Vue components",
   "main": "./dist/2fresh__dev-vue-components.common.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "vue-cli-service build",
     "build-bundle": "vue-cli-service build --target lib --name 2fresh__dev-vue-components ./src/components/index.js",
     "lint": "vue-cli-service lint",
-    "push-npm": "yarn build-bundle"
+    "push-npm": "bash ./publish.bash"
   },
   "repository": {
     "type": "git",
