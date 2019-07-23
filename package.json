@@ -1,9 +1,12 @@
 {
   "name": "@2f/vue-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "2Fresh library with Vue components",
   "author": "Kryštof Rainisch <krystof.rainisch@2fresh.cz>",
-  "contributors": ["Dmitrij Tkačenko <dmitrij.tkacenko@2fresh.cz>", "Jiří Nagy <jiri.nagy@2fresh.cz>"],
+  "contributors": [
+    "Dmitrij Tkačenko <dmitrij.tkacenko@2fresh.cz>",
+    "Jiří Nagy <jiri.nagy@2fresh.cz>"
+  ],
   "license": "ISC",
   "repository": {
     "type": "git",
