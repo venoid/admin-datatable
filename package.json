@@ -1,6 +1,6 @@
 {
   "name": "2fresh__dev-vue-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": "git@bitbucket.org:2fresh/2fresh__dev-vue-components.git",
   "author": "Kryštof Rainisch <krystof.rainisch@2fresh.cz>",
   "contributors": [
@@ -12,7 +12,7 @@
     "build": "vue-cli-service build",
     "build-bundle": "vue-cli-service build --target lib --name 2fresh__dev-vue-components ./src/components/index.js",
     "lint": "vue-cli-service lint",
-    "publish-npm": "bash ./publish.bash"
+    "push-npm": "bash ./publish.bash"
   },
   "dependencies": {
     "core-js": "^2.6.5",
