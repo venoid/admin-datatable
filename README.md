@@ -11,10 +11,13 @@ Datatable component provides you good options how to load and render your data i
 
 ### Table columns
 Array of objects with this options:
-- type - string representing field type (id, number or string)
+- type: string representing field type (id, number or string)
+
 - label
-- field - function which has in parameter row data, you can define how data will be rendered
-- width - string with number, which indicated width of a column
+
+- field: function which has in parameter row data, you can define how data will be rendered
+
+- width: string with number, which indicated width of a column
 
 ### Table data
 Array with your data.
