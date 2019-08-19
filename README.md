@@ -11,6 +11,7 @@ Datatable component provides you good options how to load and render your data i
 
 ### Table columns
 Array of objects with this options:
+
 - type: string representing field type (id, number or string)
 
 - label
