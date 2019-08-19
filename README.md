@@ -28,5 +28,6 @@ When true loading animation appears.
 
 ## Demo
 To see demo run a project:
+
 1. Install npm dependencies
 2. Run with `npm run serve` / `yarn serve`
