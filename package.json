@@ -1,10 +1,10 @@
 {
   "name": "@venoid/venoid-datatable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Datatable component developed by Venoid team using Buefy UI framework.",
-  "author": "Dmitrij Tkačenko <dmitrij.tkacenko@2fresh.cz>",
+  "author": "Dmitrij Tkačenko <dimot9@gmail.com>",
   "contributors": [
-    "Jiří Nagy <jiri.nagy@2fresh.cz>"
+    "Jiří Nagy <jirka.nagy@gmail.com>"
   ],
   "license": "MIT",
   "repository": {
