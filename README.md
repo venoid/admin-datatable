@@ -2,7 +2,7 @@
 
 Datatable component for your administration provides you good options how to load and render your data in a simple table.
 
-![screenshot-example](https://bitbucket.org/venoid/venoid-datatable/raw/832360b4a238dedc4c48e25461ec51f3662a5b4b/images/example.png)
+![screenshot-example](https://bitbucket.org/venoid/admin-datatable/raw/a28b0c2d65dc8d3b0a5519a9ed44c9c66e51a706/images/example.png)
 
 ## Props
 | Props         | Type    | Default   |                                      |
