@@ -9,9 +9,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org:venoid/venoid-datatable.git"
+    "url": "git+ssh://git@bitbucket.org:venoid/admin-datatable.git"
   },
-  "homepage": "https://bitbucket.org/venoid/venoid-datatable#readme",
+  "homepage": "https://bitbucket.org/venoid/admin-datatable#readme",
   "main": "./dist/admin-datatable.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
