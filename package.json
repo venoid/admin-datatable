@@ -32,7 +32,6 @@
     "dist/*",
     "src/*",
     "public/*",
-    "images/*",
     "*.json",
     "*.js"
   ],
@@ -76,6 +75,8 @@
     "admin",
     "administration",
     "vue-components",
-    "buefy"
+    "buefy",
+    "datatable",
+    "table"
   ]
 }
