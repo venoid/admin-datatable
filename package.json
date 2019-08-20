@@ -12,11 +12,11 @@
     "url": "git+ssh://git@bitbucket.org:venoid/venoid-datatable.git"
   },
   "homepage": "https://bitbucket.org/venoid/venoid-datatable#readme",
-  "main": "./dist/venoid-datatable.common.js",
+  "main": "./dist/admin-datatable.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name venoid-datatable ./src/index.js",
+    "build-bundle": "vue-cli-service build --target lib --name admin-datatable ./src/index.js",
     "lint": "vue-cli-service lint",
     "push-npm": "bash ./publish.bash"
   },
@@ -71,6 +71,11 @@
   "keywords": [
     "vue",
     "components",
-    "venoid"
+    "venoid",
+    "cms",
+    "admin",
+    "administration",
+    "vue-components",
+    "buefy"
   ]
 }
