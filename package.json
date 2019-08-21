@@ -1,6 +1,6 @@
 {
   "name": "@venoid/admin-datatable",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Datatable component developed by Venoid team using Buefy UI framework.",
   "author": "Dmitrij Tkačenko <dimot9@gmail.com>",
   "contributors": [
@@ -15,7 +15,6 @@
   "main": "dist/venoid-datatable.ssr.js",
   "module": "dist/venoid-datatable.esm.js",
   "unpkg": "dist/venoid-datatable.min.js",
-
   "files": [
     "dist/*",
     "src/**/*.vue"
@@ -42,9 +41,9 @@
     "@vue/cli-plugin-eslint": "^3.0.1",
     "@vue/cli-service": "^3.0.1",
     "babel-eslint": "^10.0.1",
+    "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "cross-env": "^5.2.0",
     "minimist": "^1.2.0",
     "rollup": "^1.12.1",
     "rollup-plugin-buble": "^0.19.6",
