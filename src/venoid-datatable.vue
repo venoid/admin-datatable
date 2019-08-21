@@ -44,7 +44,7 @@
 
 <script>
 export default {
-  name: "venoid-datatable",
+  name: 'venoid-datatable',
   props: {
     tableColumns: {
       type: Array,
