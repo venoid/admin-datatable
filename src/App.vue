@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import VenoidDatatable from './Datatable.vue';
+import VenoidDatatable from './venoid-datatable.vue';
 export default {
   name: 'app',
   components: {
