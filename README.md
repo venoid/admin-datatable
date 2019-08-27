@@ -8,8 +8,7 @@ Datatable component for your administration provides you good options how to loa
 | Props         | Type    | Default   |                                      |
 |---------------|---------|-----------|--------------------------------------|
 | table-columns | Array   | undefined | Array of objects with options   |
-| table-data    | Array   | undefined | Array with your data                 |
-| is-loading    | Boolean | false     | When true, loading animation appears |
+| api           | String   | "https://my-json-server.typicode.com/dmitrijt9/book-api-mock/books" | API url from which you want to get data |
 
 #### table-columns options
 ```

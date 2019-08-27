@@ -6,7 +6,7 @@
         :key="index"
         :label="column.label"
         :width="column.width"
-        :numeric="column.type === 'id' || column.type === 'number'"
+        :numeric="column.type === 'id'"
       >
         <div v-if="column.type === 'action'" class="buttons">
           <b-button
@@ -43,24 +43,32 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'venoid-datatable',
   props: {
+    api: {
+      type: String,
+      default: 'https://my-json-server.typicode.com/dmitrijt9/book-api-mock/books'
+    },
     tableColumns: {
       type: Array,
       default() {
         return undefined
       }
-    },
-    tableData: {
-      type: Array,
-      default() {
-        return undefined
-      }
-    },
-    isLoading: {
-      type: Boolean,
-      default: false
+    }
+  },
+  async created() {
+    this.isLoading = true
+    const { data } = await axios.get(this.api)
+    this.tableData = data
+    this.isLoading = false
+  },
+  data() {
+    return {
+      tableData: [],
+      isLoading: false
     }
   }
 }

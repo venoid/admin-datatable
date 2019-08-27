@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <h1>Venoid datatable</h1>
-    <venoid-datatable :is-loading="isLoading"
+    <venoid-datatable
       :table-columns="tableColumns"
-      :table-data="tableData"/>
+    />
   </div>
 </template>
 
@@ -16,7 +16,6 @@ export default {
   },
   data() {
     return {
-      isLoading: false,
       tableColumns: [
         {
           type: 'id',
@@ -26,20 +25,32 @@ export default {
         },
         {
           type: 'string',
-          label: 'Name',
-          field: (r) => r.name,
+          label: 'Title',
+          field: (r) => r.title,
+          width: '60'
+        },
+        {
+          type: 'number',
+          label: 'Author Id',
+          field: (r) => r.author_id,
+          width: '60'
+        },
+        {
+          type: 'number',
+          label: 'Pages',
+          field: (r) => r.pages,
           width: '60'
         },
         {
           type: 'string',
-          label: 'Surname',
-          field: (r) => r.surname,
+          label: 'Release Date',
+          field: (r) => r.releaseDate,
           width: '60'
         },
         {
           type: 'string',
-          label: 'Fullname',
-          field: (r) => `${r.name} ${r.surname}`,
+          label: 'ISBN',
+          field: (r) => r.isbn,
           width: '60'
         },
         {
@@ -55,29 +66,12 @@ export default {
             }
           ]
         }
-      ],
-      tableData: [
-        {
-          id: 1,
-          name: 'John',
-          surname: 'Doe'
-        },
-        {
-          id: 2,
-          name: 'Luke',
-          surname: 'Skywalker'
-        },
-        {
-          id: 3,
-          name: 'Barbara',
-          surname: 'Streisand'
-        }
       ]
     }
   },
   methods: {
     test(data) {
-      window.confirm(`${data.name} ${data.surname}`)
+      window.confirm(`${data.title}`)
     }
   }
 };
