@@ -4,7 +4,6 @@
     <div class="example-container">
       <venoid-datatable
         :table-columns="tableColumns"
-        api="https://my-json-server.typicode.com/dmitrijt9/book-api-mock/books"
         :on-api-call="getBooks"
       />
     </div>
@@ -78,23 +77,25 @@ export default {
     test(data) {
       window.confirm(`${data.title}`)
     },
-    getBooks({ api }) {
+    getBooks({ currentPage, perPageCount }) {
       return new Promise(async (resolve, reject) => {
-        try {
-          var oReq = new XMLHttpRequest();
-          oReq.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-              resolve({
-                data: JSON.parse(this.responseText),
-                total: JSON.parse(this.responseText).length
-              })
-            }
+        var oReq = new XMLHttpRequest();
+        oReq.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            resolve({
+              data: JSON.parse(this.responseText),
+              total: JSON.parse(this.responseText).length
+            })
           }
-          oReq.open("GET", api);
-          oReq.send();
-        } catch (e) {
+          if (this.status == 404) {
+              reject('API endpoint not found')
+          }
+        }
+        oReq.open("GET", "https://my-json-server.typicode.com/dmitrijt9/book-api-mock/books")
+        oReq.onerror = function(e) {
           reject(e)
         }
+        oReq.send()
       })
     }
   }

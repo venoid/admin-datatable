@@ -8,7 +8,6 @@ Datatable component for your administration provides you good options how to loa
 | Props         | Type    | Default   |                                      |
 |---------------|---------|-----------|--------------------------------------|
 | table-columns | Array   | undefined | Array of objects with options   |
-| api           | String   | "https://my-json-server.typicode.com/dmitrijt9/book-api-mock/books" | API url from which you want to get data |
 | on-api-call   | Function | undefined | Function which is resolving your api call. Should return promise! Example below.. |
 | current-page   | Number  | 1         | Number of the current page (if paginated is true) |
 | per-page-options   | Array  | [{value: '5', label: 5}, {value: '10', label: 10}, {value: '15', label: 15}, {value: '20', label: 20}]         | Define your own select box with per page options (if paginated is true) |
@@ -24,15 +23,15 @@ Datatable component for your administration provides you good options how to loa
 ```
 
 #### on-api-call function example
-- This function is called on component mount
-- In parameter is an object with an `api` you've sent to props (additional properties will be added soon)
+- This function is called on component create and everytime some action in datatable happens (click on a new page, selec per page etc.)
+- In parameter is an object with a `currentPage` and `perPageCount`. It indicates current page and count of data displayed on a page. Additional properties will be added soon...
 
 ```
 // your on-api-call function
-getBooks({ api }) {
+getBooks({ currentPage }) {
   return new Promise(async (resolve, reject) => { // return promise, which will be resolved inside the component
     try {
-      const { data } = await axios.get(api) // make your request (axios is just for example, you can call also call graphql server using apollo etc.)
+      const { data } = await axios.get("https://my-json-server.typicode.com/dmitrijt9/book-api-mock/books") // make your request (axios is just for example, you can call also call graphql server using apollo etc.)
       resolve({ // in resolve function return your data (array) and total count of the data to make pagination work properly
         data,
         total: data.length

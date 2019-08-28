@@ -6,6 +6,8 @@
     paginated
     :total-data-count="totalDataCount"
     :error-message="errorMessage"
+    :current-page="currentPage"
+    @pagination-change="apiCall"
   />
 </template>
 
@@ -18,10 +20,6 @@ export default {
     venoidTable
   },
   props: {
-    api: {
-      type: String,
-      default: 'https://my-json-server.typicode.com/dmitrijt9/book-api-mock/books'
-    },
     tableColumns: {
       type: Array,
       default() {
@@ -62,25 +60,29 @@ export default {
       }
     }
   },
-  async created() {
-    this.isLoading = true
-    try {
-      const {data, total} = await this.onApiCall({
-        api: this.api
-      })
-      this.totalDataCount = total
-      this.tableData = data
-    } catch (e) {
-      this.errorMessage = e
-    }
-    this.isLoading = false
-  },
   data() {
     return {
       tableData: [],
       isLoading: false,
       totalDataCount: null,
-      errorMessage: null
+      errorMessage: null,
+      page: this.currentPage
+    }
+  },
+  methods: {
+    async apiCall({ currentPage, perPage }) {
+      this.isLoading = true
+      try {
+        const {data, total} = await this.onApiCall({
+          currentPage,
+          perPageCount: perPage
+        })
+        this.totalDataCount = total
+        this.tableData = data
+      } catch (e) {
+        this.errorMessage = e
+      }
+      this.isLoading = false
     }
   }
 }

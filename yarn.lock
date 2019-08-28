@@ -790,9 +790,9 @@
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
 "@venoid/admin-table@^1.0.0":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@venoid/admin-table/-/admin-table-1.0.5.tgz#05a129304eae30ec0c5e7337b886b9178d1d69ef"
-  integrity sha512-PQW/jtwQyb8L028kGB8RDsIoUxF/F3Uz0SmJaDTrfcY4GrbWwUkf0xYMCfHQNF24lAN3dES7WpM9RWYNSRDDbQ==
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@venoid/admin-table/-/admin-table-1.0.9.tgz#c47ba7544a29298b184da824d936c033d8fbcd54"
+  integrity sha512-RZqHY7kurHxEfRIcQxv/R3fS0NTbHk8nkSUcAEs2WGI8tblLu8mWff3bEf7jtZzMeAMw/aC1KLXz7o2Nk88iIQ==
   dependencies:
     "@mdi/font" "^4.0.96"
     buefy "^0.8.2"
