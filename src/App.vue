@@ -1,14 +1,19 @@
 <template>
   <div id="app">
     <h1>Venoid datatable</h1>
-    <venoid-datatable
-      :table-columns="tableColumns"
-    />
+    <div class="example-container">
+      <venoid-datatable
+        :table-columns="tableColumns"
+        api="https://my-json-server.typicode.com/dmitrijt9/book-api-mock/books"
+        :on-api-call="getBooks"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import VenoidDatatable from './venoid-datatable.vue';
+
 export default {
   name: 'app',
   components: {
@@ -72,6 +77,25 @@ export default {
   methods: {
     test(data) {
       window.confirm(`${data.title}`)
+    },
+    getBooks({ api }) {
+      return new Promise(async (resolve, reject) => {
+        try {
+          var oReq = new XMLHttpRequest();
+          oReq.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              resolve({
+                data: JSON.parse(this.responseText),
+                total: JSON.parse(this.responseText).length
+              })
+            }
+          }
+          oReq.open("GET", api);
+          oReq.send();
+        } catch (e) {
+          reject(e)
+        }
+      })
     }
   }
 };
@@ -85,5 +109,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.example-container {
+  padding-top: 16px;
+  margin: auto;
+  max-width: 80%;
 }
 </style>
