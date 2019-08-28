@@ -1,3 +1,3 @@
-import Datatable from './Datatable'
+import Datatable from './venoid-datatable'
 
 export default Datatable
