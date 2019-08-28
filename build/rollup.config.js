@@ -24,7 +24,9 @@ const baseConfig = {
       },
     },
     postVue: [
-      buble(),
+      buble({
+        transforms: { asyncAwait: false }
+      }),
     ],
   },
 };
@@ -48,7 +50,7 @@ if (!argv.format || argv.format === 'es') {
     output: {
       file: 'dist/venoid-datatable.esm.js',
       format: 'esm',
-      exports: 'named',
+      exports: 'named'
     },
     plugins: [
       ...baseConfig.plugins.preVue,
