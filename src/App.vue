@@ -77,7 +77,7 @@ export default {
     test(data) {
       window.confirm(`${data.title}`)
     },
-    getBooks({ currentPage, perPageCount }) {
+    getBooks() {
       return new Promise(async (resolve, reject) => {
         var oReq = new XMLHttpRequest();
         oReq.onreadystatechange = function() {
