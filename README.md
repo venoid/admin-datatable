@@ -5,7 +5,7 @@
 
 Datatable component for your administration provides you good options how to load your data from an api to a table with an pagination.
 
-![screenshot-example](https://camo.githubusercontent.com/ff5a0541832d8019432578c7c020d4e8699f6cf5/68747470733a2f2f6269746275636b65742e6f72672f76656e6f69642f61646d696e2d646174617461626c652f7261772f306138663036303464366163613665623538393736656538663839303033306532633539623766312f696d616765732f6578616d706c652e706e67)
+![screenshot-example](https://raw.githubusercontent.com/venoid/admin-datatable/master/images/example.png)
 
 ## Props
 | Props         | Type    | Default   |                                      |
