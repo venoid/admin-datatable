@@ -10,12 +10,12 @@ Datatable component for your administration provides you good options how to loa
 ## Props
 | Props         | Type    | Default   |                                      |
 |---------------|---------|-----------|--------------------------------------|
-| table-columns | Array   | undefined | Array of objects with options   |
-| on-api-call   | Function | undefined | Function which is resolving your api call. Should return promise! Example below.. |
+| table-columns | Array   | undefined | Array of objects with [options](#table-column-options)   |
+| on-api-call   | Function | undefined | Function which is resolving your api call. Should return promise! [Example here](#on-api-call-function) |
 | current-page   | Number  | 1         | Number of the current page (if paginated is true) |
 | per-page-options   | Array  | [{value: '5', label: 5}, {value: '10', label: 10}, {value: '15', label: 15}, {value: '20', label: 20}]         | Define your own select box with per page options (if paginated is true) |
 
-#### table-columns options
+#### table-column options
 ```
 {
   type: 'string' // Enum['id', 'number', 'string ],
@@ -25,7 +25,7 @@ Datatable component for your administration provides you good options how to loa
 }
 ```
 
-#### on-api-call function example
+#### on-api-call function
 - This function is called on component create and everytime some action in datatable happens (click on a new page, selec per page etc.)
 - In parameter is an object with a `currentPage` and `perPageCount`. It indicates current page and count of data displayed on a page. Additional properties will be added soon...
 
