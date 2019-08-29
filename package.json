@@ -9,9 +9,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org:venoid/admin-datatable.git"
+    "url": "git@github.com:venoid/admin-datatable.git"
   },
-  "homepage": "https://bitbucket.org/venoid/admin-datatable#readme",
+  "homepage": "https://github.com/venoid/admin-datatable.git#readme",
   "main": "dist/venoid-datatable.ssr.js",
   "module": "dist/venoid-datatable.esm.js",
   "unpkg": "dist/venoid-datatable.min.js",
@@ -31,11 +31,7 @@
   "dependencies": {
     "@mdi/font": "^4.0.96",
     "@venoid/admin-table": "^1.0.0",
-    "axios": "^0.19.0",
     "buefy": "^0.8.2",
-    "core-js": "^2.6.5",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {

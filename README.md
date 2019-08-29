@@ -1,8 +1,11 @@
 # Venoid Admin Datatable Component
 
+[![npm](https://img.shields.io/npm/v/@venoid/admin-datatable?color=green)](https://www.npmjs.com/package/@venoid/admin-datatable)
+![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@venoid/admin-datatable)
+
 Datatable component for your administration provides you good options how to load your data from an api to a table with an pagination.
 
-![screenshot-example](https://bitbucket.org/venoid/admin-datatable/raw/0a8f0604d6aca6eb58976ee8f890030e2c59b7f1/images/example.png)
+![screenshot-example](https://camo.githubusercontent.com/ff5a0541832d8019432578c7c020d4e8699f6cf5/68747470733a2f2f6269746275636b65742e6f72672f76656e6f69642f61646d696e2d646174617461626c652f7261772f306138663036303464366163613665623538393736656538663839303033306532633539623766312f696d616765732f6578616d706c652e706e67)
 
 ## Props
 | Props         | Type    | Default   |                                      |
